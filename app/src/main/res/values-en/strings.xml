@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Key Generator</string>
+    <string name="txt_longitud">Length of key: </string>
+    <string name="txt_generar">Generate key!</string>
+    <string name="txt_clip">Copy to clipboard</string>
+    <string name="txt_ini">Select a length key and press "Generate key"</string>
+    <string name="toast_clip">Key copied to clipboard</string>
+    <string name="toast_noclip">Nothing to copy!</string>
+    <string name="sec1">Your key is not secure!</string>
+    <string name="sec2">Your key is unsafe!</string>
+    <string name="sec3">Your key is safe!</string>
+
+
+</resources>

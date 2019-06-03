@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Generatore di chiavi</string>
+    <string name="txt_longitud">Lunghezza della chiave: </string>
+    <string name="txt_generar">Genera chiave!</string>
+    <string name="txt_clip">Copia negli appunti</string>
+    <string name="txt_ini">Seleziona una lunghezza e premi "Genera chiave"</string>
+    <string name="toast_clip">Chiave copiata negli appunti</string>
+    <string name="toast_noclip">Niente da copiare!</string>
+    <string name="sec1">La tua chiave non è sicura!</string>
+    <string name="sec2">La chiave è un po sicura!</string>
+    <string name="sec3">La tua chiave è sicura!</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Générateur de clé</string>
+    <string name="txt_longitud">Longueur de la clé: </string>
+    <string name="txt_generar">Générer une clé!</string>
+    <string name="txt_clip">Copier dans le presse papier</string>
+    <string name="txt_ini">Sélectionnez une longueur et appuyez sur "Générer la clé"</string>
+    <string name="toast_clip">Copier la clé dans le presse-papier</string>
+    <string name="toast_noclip">Rien à copier!</string>
+    <string name="sec1">Votre code n\'est pas sécurisé!</string>
+    <string name="sec2">Clé peu sécurisée!</string>
+    <string name="sec3">Votre mot de passe est sécurisé!</string>
+</resources>

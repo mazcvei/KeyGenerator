@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Generador de claves</string>
+    <string name="txt_longitud">Longitud de la clave: </string>
+    <string name="txt_generar">¡Generar clave!</string>
+    <string name="txt_clip">Copiar al portapapeles</string>
+    <string name="txt_ini">Selecciona una longitud y presiona "Generar clave"</string>
+    <string name="toast_clip">Clave copiada al portapeles</string>
+    <string name="toast_noclip">¡No hay nada que copiar!</string>
+    <string name="sec1">¡Tu clave no es segura!</string>
+    <string name="sec2">¡Tu clave es poco segura!</string>
+    <string name="sec3">¡Tu clave es segura!</string>
+
+</resources>
