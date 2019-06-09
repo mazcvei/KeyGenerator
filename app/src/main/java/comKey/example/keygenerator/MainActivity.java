@@ -5,7 +5,6 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -14,8 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.keygenerator.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherAdView;
 import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
@@ -66,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         btn_porta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(longitud_clave==0 || tv_clave.getText().toString()==""){
+                if(tv_clave.getText().toString()==""){
                     Toast toast=  Toast.makeText(getApplicationContext(),R.string.toast_noclip,Toast.LENGTH_LONG);
                     toast.show();
                     return;
@@ -96,10 +93,12 @@ public class MainActivity extends AppCompatActivity {
         seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 longitud_clave = progress;
+
                 if(longitud_clave>0){
                     bt_generar.setEnabled(true);
                 }else{
                     bt_generar.setEnabled(false);
+
                 }
                 tv_longitud.setText("Longitud de la clave: " + longitud_clave);
             }
@@ -112,7 +111,10 @@ public class MainActivity extends AppCompatActivity {
         int tipo_caracter = 0;
         String clave = "";
         for (int i = 0; i < longitud_clave; i++) {
-            if (sw1.isChecked() && sw2.isChecked() && sw3.isChecked() && sw4.isChecked()) {
+            if (!sw1.isChecked() && !sw2.isChecked() && !sw3.isChecked() && !sw4.isChecked()) {
+
+                break;
+            }else if (sw1.isChecked() && sw2.isChecked() && sw3.isChecked() && sw4.isChecked()) {
                 if(longitud_clave>=10){
                     tv_security.setText(R.string.sec3);
                     tv_security.setBackgroundColor(getResources().getColor(R.color.green));
@@ -187,10 +189,13 @@ public class MainActivity extends AppCompatActivity {
                 } while (tipo_caracter == 1 || tipo_caracter == 3);
 
             } else if (sw1.isChecked() && sw4.isChecked()) {
-                if(longitud_clave>=10){
+                if(longitud_clave>=50){
+                    tv_security.setText(R.string.sec2);
+                    tv_security.setBackgroundColor(getResources().getColor(R.color.green));}
+                else if(longitud_clave>=10){
                     tv_security.setText(R.string.sec2);
                     tv_security.setBackgroundColor(getResources().getColor(R.color.yellow));
-                }else{
+                }else {
                     tv_security.setText(R.string.sec1);
                     tv_security.setBackgroundColor(getResources().getColor(R.color.red));
                 }
@@ -211,7 +216,10 @@ public class MainActivity extends AppCompatActivity {
                 } while (tipo_caracter == 0 || tipo_caracter == 3);
 
             } else if (sw2.isChecked() && sw4.isChecked()) {
-                if(longitud_clave>=10){
+                if(longitud_clave>=50){
+                    tv_security.setText(R.string.sec2);
+                    tv_security.setBackgroundColor(getResources().getColor(R.color.green));}
+                else if(longitud_clave>=10){
                     tv_security.setText(R.string.sec2);
                     tv_security.setBackgroundColor(getResources().getColor(R.color.yellow));
                 }else{
@@ -223,7 +231,10 @@ public class MainActivity extends AppCompatActivity {
                 } while (tipo_caracter == 0 || tipo_caracter == 2);
 
             } else if (sw3.isChecked() && sw4.isChecked()) {
-                if(longitud_clave>=10){
+                if(longitud_clave>=50){
+                    tv_security.setText(R.string.sec2);
+                    tv_security.setBackgroundColor(getResources().getColor(R.color.green));}
+                else if(longitud_clave>=10){
                     tv_security.setText(R.string.sec2);
                     tv_security.setBackgroundColor(getResources().getColor(R.color.yellow));
                 }else{
